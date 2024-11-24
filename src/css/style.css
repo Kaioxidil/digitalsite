@@ -1,0 +1,1429 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --red:#d63a25;
+    --white:#fff;
+    --dark:#1e1c2a;
+    --blue: #17a2d9;
+    --blue2: #0b325e;
+    --green: #00b70f;
+    --yellow:#fed330;
+}
+
+::-webkit-scrollbar{
+    height: .5rem;
+    width: 0.5rem;
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+body{
+    background-color: var(--white);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+
+
+#window{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 999;
+    padding: 50px;
+    border-radius: 30px;
+  }
+  
+.option{
+    display: block;
+    margin-top: 10px;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #cccccc4d;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+.option:hover{
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+  
+.inactive{
+    display: none;
+}
+
+
+
+
+.top{
+    background-color: var(--blue);
+    color: var(--white);
+    display: flex;
+    width: 100%;
+    height: 4vh;
+}
+
+.redes{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.face{
+    color: var(--white);
+    font-size: 20px;
+}
+
+.insta{
+    color: var(--white);
+    font-size: 20px;
+}
+
+.top .cont{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+nav{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.top .corbert{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.corbert span{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.navbar-brand img{
+    width: 150px;
+}
+
+
+.planos{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--blue);
+    color: var(--white);
+    border-bottom-right-radius: 200px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+
+    &{
+        h1{
+            margin: 0 auto;
+            text-align: center;
+            font-weight: 650;
+        }
+    }
+
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 80px 50px;
+
+}
+
+.container .card{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 20px;
+    background-color: #fff;   
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.container .card:hover{
+    height: 580px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px 50px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.container1 .card{
+    position: relative;
+    width: 350px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff;   
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+.container1 .card a{
+    background-color: var(--blue);
+    border: none;
+}
+
+
+.container .card .caixaImg{
+    position: absolute;
+    width: 300px;
+    height: 220px;
+    top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+    left: 22px;
+}
+
+.container .card .caixaImg img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .card:hover .caixaImg{
+    top: -100px;
+    scale: .75;
+    border-bottom-right-radius: 80px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.container .card .conteudo{
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    height: 35px;
+    overflow: hidden;
+    padding: 0 30px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.container .card:hover .conteudo{
+    top: 150px;
+    height: 500px;
+}
+
+.container .card .conteudo p{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.container .card .conteudo span{
+    font-size: 15px;
+}
+
+.container .card .conteudo a{
+    display: inline-block;
+    margin-top: 15px;
+    background: var(--green);
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.cobertura-area{
+    text-align: center;
+    align-items: center;
+}
+
+.cobertura-area h1{
+    font-weight: 650;
+}
+
+.conte-area{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 20%;
+    gap: 60px;
+}
+
+.conte-area p{
+    max-width: 500px;
+    font-size: 19px;
+}
+
+.conte-area img{
+    width: 30%;
+    border-bottom-right-radius: 80px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.assine a{
+    text-decoration: none;
+    padding: 20px 60px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: .3s ;
+}
+
+.assine a:hover{
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background-color: #17a2d9e1;
+}
+
+
+.outros{
+    background-color: var(--blue);
+    width: 100%;
+    height: 16vh;
+    color: var(--white);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    justify-content: center;
+    border-top-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+}
+
+.outros i{
+    font-size: 40px;
+}
+
+.outros p{
+    max-width: 200px;
+    font-size: 16px;
+}
+
+.insta, 
+.suport, 
+.plant, 
+.atend{
+    transition: 0.2s;
+}
+
+.insta:hover, 
+.suport:hover,
+.plant:hover,
+.atend:hover{
+    transform: scale(1.05);
+}
+
+.separador{
+    height: 80px;
+    width: 1px;
+    background-color: var(--white);
+}
+
+.info01{
+    width: 100%;
+    height: 110vh;
+    min-height: 200px;
+    position:relative;
+    overflow:hidden;
+}
+
+.info01 img{
+    display: block;
+    margin: 5px auto;
+    width: 100%;
+}
+
+.info01 p{
+    position: relative;
+    top: 590px;
+    left: 300px;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.info01 span{
+    font-size: 32px;
+    color: var(--yellow);
+    text-transform: uppercase;
+}
+
+.info01 a{
+    position: relative;
+    top: -550px;
+    left: 65%;
+    padding: 20px 60px;
+    background-color: var(--white);
+    color: var(--dark);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.info01 a:hover{
+    background-color: #e4e4e4;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.servicos{
+    border-bottom-right-radius: 200px;
+    width: 100%;
+    text-align: center;
+}
+
+.servicos h1{
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 650;
+}
+
+.servicos .conteudo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+    justify-content: center;
+}
+
+.servicos .conteudo img{
+    width: 25%;
+    border-bottom-left-radius: 100px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.servicos .conteudo p{
+    max-width: 500px;
+    font-size: 19px;
+    text-align: center;
+}
+
+.info01 h5{
+    position: relative;
+    top: 600px;
+    left: 200px;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.info01 h6{
+    position: relative;
+    left: 62%;
+    top: -560px;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 22px;
+    max-width: 400px;
+}
+
+
+.quemsomos h1{
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 650;
+}
+
+.quemsomos p{
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+.container footer{
+    width: 1900px;
+}
+
+div footer{
+    background-color: var(--blue2);
+}
+
+
+
+form{
+    width: 100%;
+    max-width: 30rem;
+    display: grid;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+form h1{
+    font-weight: 600;
+    text-align: center;
+}
+
+form input{
+    padding: 10px;
+    border: 1px solid var(--dark);
+    border-radius: 10px;
+}
+
+form select{
+    padding: 10px;
+    border: 1px solid var(--dark);
+    border-radius: 10px;
+}
+
+ form label{
+    margin-bottom: 0.5rem;
+    color: #84868f;
+}
+
+form textarea{
+    min-height: 8rem;
+    resize: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+form button{
+    border-radius: 20px;
+    padding: 10px;
+    color: var(--dark);
+    border: none;
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.3s;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+form button:hover{
+    border-top-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+
+p, h1, h2, h5, h6{
+    animation-duration: 3s;
+    animation-name: slidein;
+    transition: .3s;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+
+
+/* Media Queries */
+
+@media (min-width: 3840px) {
+    .top{
+        height: 4vh;
+    }
+    .face{
+        font-size: 40px;
+    }
+    
+    .insta{
+        font-size: 40px;
+    }
+
+    .corbert span{
+        font-size: 26px;
+    }
+
+    .navbar-brand img{
+        width: 300px;
+    }
+
+    .nav-item a {
+        font-size: 30px; 
+      }
+
+      .planos h1{
+        font-size: 60px;
+      }
+
+      .container .card{
+        transform: scale(1.5);
+        margin: 80px;
+      }
+
+      .info01{
+        width: 100%;
+        height: 110vh;
+        min-height: 200px;
+        position:relative;
+        overflow:hidden;
+    }
+    
+    .info01 img{
+        display: block;
+        margin: 5px auto;
+
+    }
+    
+    .info01 p{
+        position: relative;
+        top: 60%;
+        left: 300px;
+        font-size: 60px;
+        color: var(--white);
+    }
+    
+    .info01 span{
+        font-size: 85px;
+    }
+    
+    .info01 a{
+        top: -55%;
+        left: 65%;
+        font-size: 40px;
+        padding: 40px 100px;
+        border-radius: 30px;
+    }
+
+    .info01 a:hover{
+        border-top-left-radius: 80px;
+        border-bottom-right-radius: 80px;
+    }
+
+    .cobertura-area h1{
+        font-size: 60px;
+    }
+
+    .conte-area{
+        margin-top: 5%;
+        margin-left: 25%;
+        gap: 60px;
+    }
+    
+    .conte-area p{
+        max-width: 800px;
+        font-size: 40px;
+    }
+
+    .conte-area img{
+        width: 35%;
+    }
+
+    .assine a{
+        text-decoration: none;
+        padding: 30px 80px;
+        background-color: var(--blue);
+        color: var(--white);
+        font-size: 40px;
+        font-weight: 500;
+        border-radius: 30px;
+    }
+
+    .assine a:hover{
+        border-top-left-radius: 80px;
+        border-bottom-right-radius: 80px;
+    }
+
+    .outros i{
+        font-size: 60px;
+    }
+    
+    .outros p{
+        max-width: 400px;
+        font-size: 30px;
+    }
+
+    .servicos h1{
+        font-size: 60px;
+    }
+
+    .servicos .conteudo img{
+        width: 30%;
+    }
+    
+    .servicos .conteudo p{
+        max-width: 1000px;
+        font-size: 40px;
+    }
+
+    .info01 h5{
+        position: relative;
+        top: 60%;
+        left: 200px;
+        font-size: 50px;
+    }
+    
+    .info01 h6{
+        position: relative;
+        left: 62%;
+        top: -55%;
+        font-size: 45px;
+        max-width: 1000px;
+    }
+
+    .quemsomos h1{
+        font-size: 60px;
+    }
+
+    .quemsomos p{
+        max-width: 1500px;
+        font-size: 38px;
+    }
+
+    div footer{
+        font-size: 26px;
+    }
+
+    div footer h6{
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    nav{
+        text-align: center;
+    }
+
+    .planos{
+        height: 150vh;
+    }
+
+    .container .card{
+        width: 250px;
+        height: 300px;
+    }
+
+    .container .card:hover{
+        height: 600px;
+    }
+
+    .container .card .caixaImg{
+        width: 200px;
+        height: 180px;
+    }
+
+    .container .card .conteudo{
+        top: 210px;
+    }
+
+    .container .card:hover .conteudo{
+        top: 80px;
+        height: 550px;
+    }
+
+    .info01{
+        height: 60vh;
+    }
+
+    .info01 a{
+        position: relative;
+        top: -250px;
+        font-size: 16px;
+        padding: 15px 30px;
+    }
+
+    .info01 p{
+        position: relative;
+        top: 250px;
+        left: 45px;
+        font-size: 16px;
+    }
+
+    .info01 span{
+        font-size: 22px;
+    }
+
+    .conte-area{
+        display: grid;
+        text-align: center;
+    }
+
+    .conte-area p{
+        text-align: center;
+        margin-left: -20px;
+    }
+
+    .conte-area img{
+        width: 70%;
+        margin-left: 20px;
+    }
+
+    .assine a{
+        margin-left: -150px;
+    }
+
+    .outros{
+        gap: 10px;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+
+    .outros i{
+        font-size: 25px;
+    }
+
+    .outros p{
+        font-size: 13px;
+        max-width: 150px;
+    }
+    
+    .servicos{
+        margin-top: -180px;
+    }
+
+    .servicos .conteudo{
+        display: grid;
+        text-align: center;
+    }
+
+    .servicos .conteudo p{
+        text-align: center;
+        margin-left: 140px;
+    }
+
+    .servicos .conteudo a{
+        text-align: center;
+        margin-left: 20px;
+    }
+
+    .servicos .conteudo img{
+        width: 60%;
+        margin-left: 150px;
+    }
+
+    .info01{
+        display: none;
+    }
+
+    .quemsomos{
+        margin-top: 150px;
+    }
+
+    .quemsomos p{
+        max-width: 550px;
+    }
+}
+
+
+@media (max-width: 430px) {
+    .face{
+        display: none;
+    }
+    
+    .insta{
+        display: none;
+    }
+
+    .corbert span{
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    nav{
+        text-align: center;
+    }
+
+    .planos h1{
+         font-size: 32px;
+    }
+
+    .planos{
+        height: 170vh;
+    }
+
+    .container .card{
+        width: 250px;
+        height: 300px;
+    }
+
+    .container .card:hover{
+        height: 600px;
+    }
+
+    .container .card .caixaImg{
+        width: 200px;
+        height: 180px;
+    }
+
+    .container .card .conteudo{
+        top: 210px;
+    }
+
+    .container .card:hover .conteudo{
+        top: 80px;
+        height: 550px;
+    }
+
+    .info01{
+        height: 60vh;
+    }
+
+    .info01 a{
+        position: relative;
+        top: -250px;
+        font-size: 16px;
+        padding: 15px 30px;
+    }
+
+    .info01 p{
+        position: relative;
+        top: 250px;
+        left: 45px;
+        font-size: 16px;
+    }
+
+    .info01 span{
+        font-size: 22px;
+    }
+
+    .conte-area{
+        display: grid;
+        text-align: center;
+    }
+
+    .conte-area p{
+        text-align: center;
+        margin-left: -72px;
+        max-width: 400px;
+    }
+
+    .conte-area img{
+        width: 100%;
+        margin-left: -42px;
+    }
+
+    .assine a{
+        margin-left: -82px;
+    }
+
+    .outros{
+        gap: 5px;
+        margin-top: -50px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .outros i{
+        font-size: 20px;
+    }
+
+    .outros p{
+        font-size: 12px;
+        max-width: 150px;
+    }
+    
+    .servicos{
+        margin-top: -180px;
+    }
+
+    .servicos .conteudo{
+        display: grid;
+        text-align: center;
+    }
+
+    .servicos .conteudo p{
+        text-align: center;
+        margin-left: 10px;
+        max-width: 400px;
+    }
+
+    .servicos .conteudo a{
+        text-align: center;
+        margin-left: -10px;
+    }
+
+    .servicos .conteudo img{
+        width: 80%;
+        margin-left: 40px;
+    }
+
+    .info01{
+        display: none;
+    }
+
+    .quemsomos{
+        margin-top: 150px;
+    }
+
+    .quemsomos p{
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 414px) {
+    .top{
+        height: 8vh;
+    }
+
+    .face{
+        display: none;
+    }
+    
+    .insta{
+        display: none;
+    }
+
+    .corbert span{
+        font-size: 13px;
+        font-weight: 500;
+        margin-left: -20px;
+    }
+
+    nav{
+        text-align: center;
+    }
+
+    .planos h1{
+         font-size: 32px;
+    }
+
+    .planos{
+        height: 190vh;
+    }
+
+    .container .card{
+        width: 250px;
+        height: 300px;
+    }
+
+    .container .card:hover{
+        height: 600px;
+    }
+
+    .container .card .caixaImg{
+        width: 200px;
+        height: 180px;
+    }
+
+    .container .card .conteudo{
+        top: 210px;
+    }
+
+    .container .card:hover .conteudo{
+        top: 80px;
+        height: 550px;
+    }
+
+    .info01{
+        height: 60vh;
+    }
+
+    .info01 a{
+        position: relative;
+        top: -250px;
+        font-size: 16px;
+        padding: 15px 30px;
+    }
+
+    .info01 p{
+        position: relative;
+        top: 250px;
+        left: 40px;
+        font-size: 16px;
+    }
+
+    .info01 span{
+        font-size: 22px;
+    }
+
+    .conte-area{
+        display: grid;
+        text-align: center;
+    }
+
+    .conte-area p{
+        text-align: center;
+        margin-left: -50px;
+        max-width: 350px;
+    }
+
+    .conte-area img{
+        width: 100%;
+        margin-left: -35px;
+    }
+
+    .assine a{
+        margin-left: -82px;
+    }
+
+    .outros{
+        display: none;
+    }
+    
+    .servicos{
+        margin-top: -180px;
+    }
+
+    .servicos .conteudo{
+        display: grid;
+        text-align: center;
+    }
+
+    .servicos .conteudo p{
+        text-align: center;
+        margin-left: 30px;
+        max-width: 350px;
+    }
+
+    .servicos .conteudo a{
+        text-align: center;
+        margin-left: 10px;
+    }
+
+    .servicos .conteudo img{
+        width: 85%;
+        margin-left: 28px;
+    }
+
+    .info01{
+        display: none;
+    }
+
+    .quemsomos{
+        margin-top: 150px;
+    }
+
+    .quemsomos p{
+        max-width: 350px;
+    }
+}
+
+
+@media (max-width: 390px) {
+    .top{
+        height: 8vh;
+    }
+
+    .face{
+        display: none;
+    }
+    
+    .insta{
+        display: none;
+    }
+
+    .corbert span{
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    nav{
+        text-align: center;
+    }
+
+    .planos h1{
+         font-size: 32px;
+    }
+
+    .planos{
+        height: 195vh;
+    }
+
+    .container .card{
+        width: 250px;
+        height: 300px;
+    }
+
+    .container .card:hover{
+        height: 600px;
+    }
+
+    .container .card .caixaImg{
+        width: 200px;
+        height: 180px;
+    }
+
+    .container .card .conteudo{
+        top: 210px;
+    }
+
+    .container .card:hover .conteudo{
+        top: 80px;
+        height: 550px;
+    }
+
+    .info01{
+        height: 60vh;
+    }
+
+    .info01 a{
+        position: relative;
+        top: -250px;
+        font-size: 16px;
+        padding: 15px 30px;
+    }
+
+    .info01 p{
+        position: relative;
+        top: 250px;
+        left: 45px;
+        font-size: 16px;
+    }
+
+    .info01 span{
+        font-size: 22px;
+    }
+
+    .conte-area{
+        display: grid;
+        text-align: center;
+    }
+
+    .conte-area p{
+        text-align: center;
+        margin-left: -60px;
+        max-width: 350px;
+    }
+
+    .conte-area img{
+        width: 100%;
+        margin-left: -35px;
+    }
+
+    .assine a{
+        margin-left: -82px;
+    }
+
+    .outros{
+        display: none;
+    }
+
+    
+    .servicos{
+        margin-top: -180px;
+    }
+
+    .servicos .conteudo{
+        display: grid;
+        text-align: center;
+    }
+
+    .servicos .conteudo p{
+        text-align: center;
+        margin-left: 25px;
+        max-width: 350px;
+    }
+
+    .servicos .conteudo a{
+        text-align: center;
+        margin-left: 10px;
+    }
+
+    .servicos .conteudo img{
+        width: 85%;
+        margin-left: 28px;
+    }
+
+    .info01{
+        display: none;
+    }
+
+    .quemsomos{
+        margin-top: 150px;
+    }
+
+    .quemsomos p{
+        max-width: 350px;
+    }
+}
+
+
+
+@media (max-width: 375px) {
+    .top{
+        height: 8vh;
+    }
+
+    .face{
+        display: none;
+    }
+    
+    .insta{
+        display: none;
+    }
+
+    .corbert span{
+        font-size: 13px;
+        font-weight: 500;
+
+    }
+
+    nav{
+        text-align: center;
+    }
+
+    .planos h1{
+         font-size: 32px;
+    }
+
+    .planos{
+        height: 245vh;
+    }
+
+    .container .card{
+        width: 250px;
+        height: 300px;
+    }
+
+    .container .card:hover{
+        height: 600px;
+    }
+
+    .container .card .caixaImg{
+        width: 200px;
+        height: 180px;
+    }
+
+    .container .card .conteudo{
+        top: 210px;
+    }
+
+    .container .card:hover .conteudo{
+        top: 80px;
+        height: 550px;
+    }
+
+    .info01{
+        height: 50vh;
+    }
+
+    .info01 a{
+        position: relative;
+        top: -250px;
+        font-size: 16px;
+        padding: 15px 30px;
+    }
+
+    .info01 p{
+        position: relative;
+        top: 250px;
+        left: 40px;
+        font-size: 16px;
+    }
+
+    .info01 span{
+        font-size: 22px;
+    }
+
+    .conte-area{
+        display: grid;
+        text-align: center;
+    }
+
+    .conte-area p{
+        text-align: center;
+        margin-left: -60px;
+        max-width: 350px;
+    }
+
+    .conte-area img{
+        width: 100%;
+        margin-left: -35px;
+    }
+
+    .assine a{
+        margin-left: -82px;
+    }
+
+    .outros{
+        display: none;
+    }
+
+    
+    .servicos{
+        margin-top: -180px;
+    }
+
+    .servicos .conteudo{
+        display: grid;
+        text-align: center;
+    }
+
+    .servicos .conteudo p{
+        text-align: center;
+        margin-left: 10px;
+        max-width: 350px;
+    }
+
+    .servicos .conteudo a{
+        text-align: center;
+        margin-left: -10px;
+    }
+
+    .servicos .conteudo img{
+        width: 85%;
+        margin-left: 28px;
+    }
+
+    .info01{
+        display: none;
+    }
+
+    .quemsomos{
+        margin-top: 150px;
+    }
+
+    .quemsomos p{
+        max-width: 350px;
+    }
+}
+
